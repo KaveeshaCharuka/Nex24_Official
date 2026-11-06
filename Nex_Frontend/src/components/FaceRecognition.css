@@ -1,0 +1,291 @@
+/* FaceRecognition.css */
+
+.fr-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #060b13; /* Nex24 Deep Dark Theme */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= TOP BAR ================= */
+.fr-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fr-brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.brand-n {
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.title-divider {
+  color: #3b82f6;
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.fr-cancel-btn {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.fr-cancel-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* ================= CONTAINER & HEADER ================= */
+.fr-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.fr-header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
+
+.blue-text {
+  color: #3b82f6;
+}
+
+.fr-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin: 0 0 40px 0;
+}
+
+/* ================= CAMERA SCANNER UI ================= */
+.fr-scanner-section {
+  background: #0b121f;
+  border: 1px solid rgba(59, 130, 246, 0.08);
+  border-radius: 16px;
+  padding: 40px 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fr-camera-box {
+  width: 300px;
+  height: 300px;
+  background: #060b13;
+  border-radius: 50%; /* Circular scanner */
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(59, 130, 246, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* State Based Glows */
+.fr-camera-box.scanning {
+  border-color: #3b82f6;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), inset 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.fr-camera-box.success {
+  border-color: #10b981;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3), inset 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+/* Targeting Brackets */
+.bracket {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: #3b82f6;
+  border-style: solid;
+  border-width: 0;
+  opacity: 0.7;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.fr-camera-box.success .bracket {
+  border-color: #10b981;
+}
+
+.top-left { top: 20px; left: 20px; border-top-width: 3px; border-left-width: 3px; }
+.top-right { top: 20px; right: 20px; border-top-width: 3px; border-right-width: 3px; }
+.bottom-left { bottom: 20px; left: 20px; border-bottom-width: 3px; border-left-width: 3px; }
+.bottom-right { bottom: 20px; right: 20px; border-bottom-width: 3px; border-right-width: 3px; }
+
+/* Video Feed Placeholder Elements */
+.fr-video-placeholder {
+  z-index: 1;
+  color: #64748b;
+  font-size: 1rem;
+}
+
+.cam-icon {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.user-silhouette {
+  font-size: 8rem;
+  opacity: 0.3;
+}
+
+.success-icon {
+  font-size: 4rem;
+  color: #10b981;
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.blink {
+  animation: blinkAnim 1.5s infinite;
+}
+
+/* Scanning Laser Animation */
+.fr-scanner-laser {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3b82f6;
+  box-shadow: 0 0 15px 2px #3b82f6;
+  z-index: 3;
+  animation: scanLaser 2s linear infinite;
+}
+
+@keyframes scanLaser {
+  0% { top: 10%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 90%; opacity: 0; }
+}
+
+@keyframes blinkAnim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Success Overlay Overlay */
+.fr-success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 185, 129, 0.2);
+  z-index: 2;
+  animation: fadeInOut 0.5s ease-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Status Text */
+.fr-status-display h3 {
+  margin: 0 0 25px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.scanning-text {
+  color: #3b82f6 !important;
+  animation: blinkAnim 1.5s infinite;
+}
+
+.success-text {
+  color: #10b981 !important;
+}
+
+/* Buttons */
+.fr-start-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.fr-start-btn:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+.scanning-btn {
+  background: #1e293b;
+  color: #94a3b8;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.success-btn {
+  background: #10b981;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  cursor: default;
+}
+
+/* ================= INSTRUCTIONS PANEL ================= */
+.fr-instructions {
+  margin-top: 40px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 12px;
+}
+
+.fr-instructions h3 {
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+  color: #e2e8f0;
+}
+
+.fr-instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fr-instructions li {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

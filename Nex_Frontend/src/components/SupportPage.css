@@ -1,0 +1,153 @@
+/* SupportPage.css */
+
+.support-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #080c14; /* Dashboard Background Color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.support-glass-card {
+  background: #0d1527; /* Dashboard Card Color */
+  border: 1px solid rgba(59, 130, 246, 0.15); /* Neon Blue Border */
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.support-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.support-main-icon {
+  color: #3b82f6; /* Neon Blue */
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.support-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.support-header p {
+  color: #94a3b8; /* Light Gray/Blue */
+  margin: 0;
+  font-size: 14px;
+}
+
+.support-quick-cards {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.quick-card {
+  flex: 1;
+  background: rgba(59, 130, 246, 0.05); /* Slight blue tint */
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  padding: 20px 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.quick-card:hover {
+  transform: translateY(-2px);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.card-icon {
+  color: #3b82f6;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+}
+
+.quick-card h4 {
+  margin: 5px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.quick-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.support-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.support-input-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+  text-align: left;
+}
+
+.support-input-group input, 
+.support-input-group textarea {
+  background: #080c14; /* Input field background matches page */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.support-input-group input::placeholder,
+.support-input-group textarea::placeholder {
+  color: #475569;
+}
+
+.support-input-group input:focus, 
+.support-input-group textarea:focus {
+  border-color: #3b82f6; /* Neon outline on click */
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.2);
+}
+
+.support-submit-btn {
+  background: #3b82f6; 
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.support-submit-btn:hover {
+  background: #2563eb; /* Slightly darker blue on hover */
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}

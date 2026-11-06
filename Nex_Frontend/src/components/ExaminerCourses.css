@@ -1,0 +1,56 @@
+/* ExaminerCourses.css */
+.exam-courses-wrapper {
+  padding: 40px 60px;
+  background: #080c14;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.exam-header { margin-bottom: 35px; }
+.exam-header h2 { font-size: 2.2rem; font-weight: 700; }
+.text-gradient { color: #3b82f6; }
+
+.exam-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.course-card {
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.status-badge {
+  font-size: 0.8rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.status-badge.active { background: rgba(59, 130, 246, 0.15); color: #3b82f6; }
+.status-badge.completed { background: rgba(16, 185, 129, 0.15); color: #10b981; }
+
+.view-btn {
+  margin-top: auto;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid #3b82f6;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover { background: #3b82f6; }

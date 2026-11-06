@@ -1,0 +1,240 @@
+/* AccountActivation.css */
+
+.aa-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #060b13;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Topbar */
+.aa-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #090f1c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.aa-brand { font-size: 1.1rem; font-weight: 600; color: #f8fafc; }
+.brand-n { color: #3b82f6; font-weight: 700; text-shadow: 0 0 10px rgba(59, 130, 246, 0.4); }
+.title-divider { color: #3b82f6; margin: 0 8px; font-weight: 400; }
+
+/* Main Container */
+.aa-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 0 20px 50px 20px;
+}
+
+.aa-card {
+  background: #0b121f;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.aa-card h2 { margin: 0 0 8px 0; font-size: 1.5rem; color: #f1f5f9; }
+.aa-sub { color: #94a3b8; font-size: 0.9rem; margin: 0 0 25px 0; }
+
+/* Role Switcher */
+.role-switcher {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  background: #060b13;
+  padding: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 25px;
+}
+
+.role-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-btn:hover { color: #ffffff; }
+
+.role-btn.active {
+  background: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Form Styles */
+.aa-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .aa-form-row { grid-template-columns: 1fr; }
+}
+
+.aa-input-group label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.aa-input {
+  width: 100%;
+  background: #060b13;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.aa-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ================= CAMERA & FACE SCAN SECTION ================= */
+.aa-camera-section {
+  background: rgba(59, 130, 246, 0.03);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.camera-section-title {
+  margin-bottom: 12px;
+}
+
+.camera-section-title span {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.camera-section-title small {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.aa-webcam-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aa-camera-feed {
+  width: 100%;
+  height: 170px;
+  background: #030712;
+  border: 2px dashed rgba(59, 130, 246, 0.35);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.camera-avatar { font-size: 3rem; opacity: 0.25; }
+
+/* Scanning Laser Animation */
+.aa-scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #3b82f6;
+  box-shadow: 0 0 12px #3b82f6;
+  animation: scanAnim 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes scanAnim {
+  0% { top: 0%; }
+  100% { top: 95%; }
+}
+
+.camera-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.scan-status-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.scan-status-text.verified {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.aa-btn-scan {
+  background: #1e293b;
+  color: #3b82f6;
+  border: 1px solid #3b82f6;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.aa-btn-scan:hover { background: #3b82f6; color: white; }
+
+.verified-tag {
+  background: rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Primary Button */
+.aa-btn-primary {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  margin-top: 5px;
+}
+
+.aa-btn-primary:hover { background: #2563eb; }
+
+/* Success Card */
+.aa-success-card { text-align: center; }
+.success-icon { font-size: 3.5rem; margin-bottom: 15px; }

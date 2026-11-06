@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Dark glowing background */
+  background: radial-gradient(circle at center, #0f2735 0%, #050b12 70%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background tech lines - You can add a circuit board image url here */
+.background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(255,255,255,0.1) 40px, rgba(255,255,255,0.1) 41px);
+  z-index: 0;
+}
+
+.header, .login-card, .footer {
+  z-index: 1;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.header span {
+  color: #38bdf8; /* Blue color for '24' */
+}
+
+/* Glassmorphism Effect */
+.login-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 40px 35px;
+  width: 380px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.login-card h2 {
+  font-weight: 500;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  color: #e2e8f0;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 15px;
+  background: rgba(10, 20, 35, 0.6);
+  border: 1px solid #1c6b94;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Glowing border effect on focus */
+.input-group input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+.input-group input::placeholder {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 25px;
+}
+
+.forgot-password a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+  color: #38bdf8;
+}
+
+/* Blue Login Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.1s;
+}
+
+.login-btn:hover {
+  background: #1d4ed8;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+}
+
+.register-link {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.register-link a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Glowing Shield positioned at bottom right */
+.shield-icon {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.7)); /* Blue Glow Effect */
+  z-index: 2;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.footer span {
+  color: #94a3b8;
+}
+
+/* ලොගින් බොත්තමේ Loading Spinner එක */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

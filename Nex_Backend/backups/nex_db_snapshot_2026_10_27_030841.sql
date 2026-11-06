@@ -1,0 +1,19 @@
+-- NEX24 ENTERPRISE DATABASE BACKUP SNAPSHOT
+-- Generated: Tue Oct 27 03:08:41 IST 2026
+
+-- Table: `admin` | Row count: 1
+-- Table: `course` | Row count: 2
+-- Table: `exam` | Row count: 2
+-- Table: `exam_attempt` | Row count: 3
+-- Table: `exam_results` | Row count: 3
+-- Table: `examiner` | Row count: 1
+-- Table: `face_data` | Row count: 1
+-- Table: `notifications` | Row count: 1
+-- Table: `proctor_logs` | Row count: 47
+-- Table: `question` | Row count: 10
+-- Table: `question_option` | Row count: 40
+-- Table: `questions` | Row count: 10
+-- Table: `result` | Row count: 3
+-- Table: `student` | Row count: 1
+-- Table: `student_answer` | Row count: 9
+-- Table: `users` | Row count: 4

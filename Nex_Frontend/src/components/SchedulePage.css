@@ -1,0 +1,150 @@
+/* SchedulePage.css */
+.schedule-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 50px; 
+  background: #080c14;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.st-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back-dash-btn {
+  background: #111c32;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.88rem;
+  transition: 0.2s;
+}
+.back-dash-btn:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.st-brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.brand-n { color: #3b82f6; margin-right: 2px; }
+.divider { color: #334155; margin: 0 8px; font-weight: 300; }
+.sub-title { color: #3b82f6; font-weight: 600; }
+
+.schedule-header {
+  margin-bottom: 35px;
+}
+
+.schedule-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.text-gradient {
+  color: #3b82f6; /* Dashboard Neon Blue */
+}
+
+.schedule-header p {
+  color: #94a3b8;
+  font-size: 1rem;
+}
+
+/* Main Table/List Card */
+.schedule-card {
+  width: 100%;
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+
+.schedule-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Timetable Row Row Style */
+.schedule-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(8, 12, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px 24px;
+  transition: all 0.2s ease;
+}
+
+.schedule-item:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.02);
+  transform: translateX(4px);
+}
+
+.schedule-day-box {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.time-text {
+  font-size: 0.85rem;
+  color: #3b82f6;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.schedule-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.schedule-details h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.schedule-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* Status Badge */
+.status-indicator {
+  font-size: 0.85rem;
+  color: #10b981; /* Dashboard Neon Green */
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+}

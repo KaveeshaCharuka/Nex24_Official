@@ -1,0 +1,157 @@
+/* ManageUsers.css */
+
+.manage-users-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #080c14;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Top Bar */
+.mu-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d1527;
+  padding: 15px 40px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.mu-back-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #94a3b8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.mu-back-btn:hover { background: rgba(148, 163, 184, 0.1); color: #ffffff; }
+
+.mu-title { font-size: 1.2rem; font-weight: 700; color: #3b82f6; }
+.logo-text { color: #ffffff; }
+
+/* Main Container */
+.mu-container {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mu-header h2 { font-size: 2.2rem; margin-bottom: 8px; }
+.neon-blue { color: #3b82f6; }
+.mu-header p { color: #94a3b8; margin-bottom: 30px; font-size: 0.95rem; }
+
+/* Controls (Search & Filter) */
+.mu-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mu-search-box { flex: 1; min-width: 300px; }
+
+.mu-search-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.mu-search-input:focus { border-color: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.2); }
+
+.mu-filter-box {
+  display: flex;
+  gap: 15px;
+}
+
+.mu-select {
+  padding: 12px 16px;
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 8px;
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.mu-add-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mu-add-btn:hover { background: #2563eb; }
+
+/* Table Styling */
+.mu-table-card {
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.mu-table-responsive { width: 100%; overflow-x: auto; }
+.mu-table { width: 100%; border-collapse: collapse; text-align: left; }
+.mu-table th { background: rgba(0, 0, 0, 0.2); padding: 16px; color: #94a3b8; font-size: 0.85rem; text-transform: uppercase; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.mu-table td { padding: 16px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.95rem; vertical-align: middle; }
+.mu-table tr:hover { background: rgba(59, 130, 246, 0.03); }
+
+/* Table Content Styling */
+.mu-id-col { font-family: monospace; color: #94a3b8; font-size: 0.9rem; }
+.mu-user-name { font-weight: 600; color: #ffffff; margin-bottom: 4px; }
+.mu-user-email { font-size: 0.85rem; color: #64748b; }
+.mu-date-col { color: #94a3b8; font-size: 0.9rem; }
+
+/* Badges & Tags */
+.mu-role-tag { padding: 4px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; display: inline-block; }
+.mu-role-tag.student { background: rgba(59, 130, 246, 0.1); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.2); }
+.mu-role-tag.examiner { background: rgba(168, 85, 247, 0.1); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.2); }
+
+.mu-status-badge { padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-block; }
+.mu-status-badge.active { background: rgba(16, 185, 129, 0.1); color: #10b981; }
+.mu-status-badge.suspended { background: rgba(239, 68, 68, 0.1); color: #ef4444; }
+
+/* Action Buttons */
+.mu-actions-col { display: flex; gap: 8px; align-items: center; }
+
+.mu-action-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.mu-action-btn.suspend { background: rgba(245, 158, 11, 0.1); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+.mu-action-btn.suspend:hover { background: #f59e0b; color: #fff; }
+
+.mu-action-btn.activate { background: rgba(16, 185, 129, 0.1); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+.mu-action-btn.activate:hover { background: #10b981; color: #fff; }
+
+.mu-action-btn.delete { background: rgba(239, 68, 68, 0.1); padding: 6px 10px; border: 1px solid rgba(239, 68, 68, 0.3); }
+.mu-action-btn.delete:hover { background: #ef4444; }
+
+/* Empty State */
+.mu-no-data { text-align: center; padding: 40px !important; color: #64748b; font-style: italic; }

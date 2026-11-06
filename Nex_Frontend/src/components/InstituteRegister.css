@@ -1,0 +1,134 @@
+/* InstituteRegister.css */
+
+.ir-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #060b13;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Topbar */
+.ir-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #090f1c;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ir-brand { font-size: 1.1rem; font-weight: 600; color: #f8fafc; }
+.brand-n { color: #3b82f6; font-weight: 700; text-shadow: 0 0 10px rgba(59, 130, 246, 0.4); }
+.title-divider { color: #3b82f6; margin: 0 8px; font-weight: 400; }
+
+.ir-secondary-btn {
+  background: transparent;
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.ir-secondary-btn:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Main Container */
+.ir-container {
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 20px 50px 20px;
+}
+
+.ir-card {
+  background: #0b121f;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 14px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.ir-header h2 { margin: 0 0 8px 0; font-size: 1.5rem; color: #f1f5f9; }
+.ir-sub { color: #94a3b8; font-size: 0.9rem; margin: 0 0 25px 0; }
+
+/* Form Layout */
+.ir-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 600px) {
+  .ir-form-row { grid-template-columns: 1fr; }
+}
+
+.ir-input-group {
+  margin-bottom: 18px;
+}
+
+.ir-input-group label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.ir-input {
+  width: 100%;
+  background: #060b13;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f1f5f9;
+  padding: 11px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.ir-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Terms Checkbox */
+.ir-terms-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.ir-terms-box input {
+  accent-color: #3b82f6;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Primary Button */
+.ir-btn-primary {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.ir-btn-primary:hover { background: #2563eb; }

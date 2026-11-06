@@ -1,0 +1,112 @@
+/* HowItWorksPage.css */
+
+.how-container {
+  min-height: 100vh;
+  background-color: #0b1120;
+  background-image: radial-gradient(circle at top right, rgba(79, 70, 229, 0.15) 0%, rgba(11, 17, 32, 0) 50%),
+                    radial-gradient(circle at left center, rgba(14, 165, 233, 0.08) 0%, rgba(11, 17, 32, 0) 50%);
+  color: #f8fafc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timeline specific styles */
+.timeline-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.timeline-step {
+  display: flex;
+  gap: 30px;
+  position: relative;
+  align-items: flex-start;
+}
+
+/* Connecting line (vertical) */
+.timeline-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 45px; /* Center of the number */
+  left: 17px; /* Center of the number */
+  width: 1px;
+  height: calc(100% + 15px);
+  background-color: rgba(14, 165, 233, 0.3);
+  z-index: 1;
+}
+
+/* Number display */
+.step-number-container {
+  position: relative;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.step-number {
+  font-size: 16px;
+  color: white;
+  background-color: #0c152a;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  font-weight: bold;
+}
+
+/* Smaller connection dot */
+.step-circle {
+  margin-top: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #0f172a;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card details */
+.timeline-card {
+  flex: 1;
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(14, 165, 233, 0.15); /* Subtler cyan border */
+  border-radius: 10px;
+  padding: 20px;
+  transition: background 0.3s;
+}
+.timeline-card:hover { background: rgba(30, 41, 59, 0.5); }
+
+.timeline-card .card-header-flex { display: flex; align-items: center; gap: 15px; margin-bottom: 12px; }
+.timeline-card h3 { font-size: 16px; color: #f1f5f9; margin: 0; font-weight: 500; }
+.timeline-card p { font-size: 13px; color: #cbd5e1; margin: 0; line-height: 1.6; }
+
+/* Icons & Glows */
+.icon-wrapper { padding: 8px; border-radius: 6px; }
+.how-icon { size: 18; color: #22d3ee; }
+
+.cyan-glow {
+  background: rgba(14, 165, 233, 0.1);
+  box-shadow: inset 0 0 10px rgba(14, 165, 233, 0.1);
+}
+.green-glow {
+  box-shadow: inset 0 0 10px rgba(16, 185, 129, 0.2);
+}
+
+/* Responsive constraints */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .feat-hero h1 { font-size: 32px; }
+}

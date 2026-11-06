@@ -1,0 +1,142 @@
+/* FaceIdConfig.css */
+
+.fic-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #080c14;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Top Bar */
+.fic-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0d1527;
+  padding: 15px 40px;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.fic-back-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #94a3b8;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.fic-back-btn:hover { background: rgba(148, 163, 184, 0.1); color: #ffffff; }
+.fic-title { font-size: 1.2rem; font-weight: 700; color: #3b82f6; }
+
+/* Main Container */
+.fic-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.fic-header h2 { font-size: 2.2rem; margin-bottom: 8px; }
+.fic-header p { color: #94a3b8; margin-bottom: 30px; font-size: 0.95rem; }
+
+/* Layout Grid */
+.fic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .fic-grid { grid-template-columns: 1fr; }
+}
+
+/* Cards */
+.fic-card {
+  background: #0d1527;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.fic-card h3 { font-size: 1.2rem; margin-top: 0; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; }
+.fic-card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 10px; margin-bottom: 10px; }
+.fic-card-header h3 { border: none; padding: 0; margin: 0; }
+.fic-card-sub { font-size: 0.85rem; color: #64748b; margin-bottom: 20px; }
+
+/* Settings Items */
+.fic-setting-item {
+  background: #080c14;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 16px;
+}
+
+.fic-setting-info label { display: block; font-weight: 600; color: #e2e8f0; margin-bottom: 4px; }
+.fic-setting-info p { font-size: 0.8rem; color: #64748b; margin: 0 0 12px 0; }
+
+.fic-slider { width: 100%; accent-color: #3b82f6; cursor: pointer; }
+
+.toggle-row { display: flex; justify-content: space-between; align-items: center; }
+.toggle-row .fic-setting-info p { margin: 0; }
+
+.fic-toggle-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 60px;
+}
+
+.fic-toggle-btn.active { background: #10b981; color: #fff; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+
+/* Training Stats & Button */
+.fic-stats-row { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 0.9rem; }
+.fic-stat { display: flex; flex-direction: column; gap: 4px; }
+.fic-stat span { color: #64748b; }
+.fic-stat strong { color: #3b82f6; }
+
+.fic-train-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.fic-train-btn:hover { background: #2563eb; }
+
+/* Progress Bar */
+.fic-progress-container { background: #080c14; padding: 16px; border-radius: 8px; border: 1px solid rgba(59, 130, 246, 0.3); }
+.fic-progress-info { display: flex; justify-content: space-between; font-size: 0.85rem; color: #3b82f6; margin-bottom: 10px; font-weight: 600; }
+.fic-progress-bar-bg { width: 100%; height: 8px; background: rgba(255, 255, 255, 0.1); border-radius: 4px; overflow: hidden; }
+.fic-progress-bar-fill { height: 100%; background: #3b82f6; transition: width 0.2s ease-in-out; box-shadow: 0 0 10px #3b82f6; }
+
+/* Logs List */
+.fic-logs-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.fic-log-item { display: flex; align-items: center; background: #080c14; padding: 12px 16px; border-radius: 8px; border-left: 3px solid #3b82f6; border: 1px solid rgba(255,255,255,0.05); }
+.fic-log-icon { font-size: 1.2rem; margin-right: 16px; }
+.fic-log-details { flex: 1; }
+.fic-log-title { font-weight: 600; color: #e2e8f0; font-size: 0.95rem; margin-bottom: 4px; }
+.fic-log-desc { font-size: 0.8rem; color: #64748b; }
+.fic-log-time { font-size: 0.8rem; color: #94a3b8; font-weight: 500; }
+
+.fic-clear-btn { background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; }
+.fic-clear-btn:hover { background: #ef4444; color: #fff; }
+
+.fic-view-all-btn { width: 100%; background: transparent; color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); padding: 12px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.fic-view-all-btn:hover { background: rgba(59, 130, 246, 0.1); }

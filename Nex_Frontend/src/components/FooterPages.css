@@ -1,0 +1,130 @@
+/* FooterPages.css */
+
+.footer-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #060b13; /* image_0c6c5c.jpg එකේ තියෙන Nex24 Original Dark Base Background */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+.fp-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Elegant Muted Back Button */
+.fp-back-btn {
+  background: #0c1322;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 0.9rem;
+}
+.fp-back-btn:hover {
+  background: #1e293b;
+  color: white;
+}
+
+/* Page Header Design */
+.fp-header {
+  text-align: center;
+  margin: 40px 0;
+}
+.fp-header h1 {
+  font-size: 2.8rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+.blue-glow {
+  color: #3b82f6;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+.fp-header p {
+  color: #64748b;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Content Container Card (image_0c6c5c.jpg කාඩ් වල පෙනුමටම) */
+.fp-card {
+  background: #0b121f;
+  border: 1px solid rgba(59, 130, 246, 0.05);
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+.m-top { margin-top: 30px; }
+
+/* Section Formats */
+.fp-section {
+  margin-bottom: 30px;
+}
+.fp-section:last-child { margin-bottom: 0; }
+.fp-section h3 {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  margin: 0 0 12px 0;
+  font-weight: 600;
+}
+.fp-section p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+/* Help Center Support Grid Setup */
+.fp-help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.help-box {
+  background: #0b121f;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 25px;
+  transition: 0.2s;
+}
+.help-box:hover {
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-2px);
+}
+.help-box h4 {
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+.help-box p {
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* FAQ Item styling */
+.faq-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+}
+.faq-item:first-of-type { border-top: none; padding-top: 10px; }
+.faq-item h5 {
+  font-size: 1rem;
+  color: #3b82f6;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+.faq-item p {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}

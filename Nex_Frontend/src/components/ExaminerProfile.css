@@ -1,0 +1,256 @@
+/* ExaminerProfile.css */
+
+.ep-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: #060b13; /* Deep dark background matching Nex24 theme */
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* ================= TOP BAR ================= */
+.ep-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ep-back-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.ep-back-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.ep-brand-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.brand-n {
+  color: #3b82f6;
+  font-weight: 700;
+}
+
+.title-divider {
+  color: #3b82f6;
+  margin: 0 8px;
+  font-weight: 400;
+}
+
+.title-text {
+  color: #3b82f6;
+}
+
+/* ================= HEADER ================= */
+.ep-header {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.ep-header h1 {
+  font-size: 2.2rem;
+  margin: 0 0 10px 0;
+}
+
+.blue-text {
+  color: #3b82f6;
+}
+
+.ep-header p {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ================= MAIN CONTAINER ================= */
+.ep-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px 50px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .ep-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards Base Style */
+.ep-card {
+  background: #0b121f;
+  border: 1px solid rgba(59, 130, 246, 0.08);
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* ================= LEFT CARD (Profile) ================= */
+.profile-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ep-avatar-wrapper {
+  margin-bottom: 20px;
+}
+
+.ep-avatar {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4); /* Glowing effect */
+}
+
+.ep-avatar span {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.ep-name {
+  margin: 0 0 10px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.ep-role-badge {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.ep-details-list {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.ep-detail-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 10px;
+}
+
+.ep-detail-item label {
+  color: #64748b;
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ep-detail-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #f1f5f9;
+  font-weight: 500;
+}
+
+.ep-edit-btn {
+  width: 100%;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+
+.ep-edit-btn:hover {
+  background: #2563eb;
+}
+
+/* ================= RIGHT CARD (Security) ================= */
+.security-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.ep-sec-title {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.ep-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.ep-input-group {
+  text-align: center;
+}
+
+.ep-input-group label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.ep-input-group input {
+  width: 100%;
+  background: #060b13;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border 0.2s;
+}
+
+.ep-input-group input:focus {
+  border-color: #3b82f6;
+}
+
+.ep-update-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.ep-update-btn:hover {
+  background: #2563eb;
+}
